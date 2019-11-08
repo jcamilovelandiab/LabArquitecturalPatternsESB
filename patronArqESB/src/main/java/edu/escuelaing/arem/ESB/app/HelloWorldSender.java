@@ -17,7 +17,8 @@ public class HelloWorldSender {
     public void run(){    
         CamelContext context = new DefaultCamelContext();
         //String brokerURL = args[0];
-        ConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://localhost:61616?jms.useAsyncSend=true");
+        ConnectionFactory connectionFactory = new ActiveMQConnectionFactory(
+                "tcp://18.234.241.250:61616?jms.useAsyncSend=true");
         try {
                 // Create a Connection
                 Connection connection = connectionFactory.createConnection("smx","smx");
